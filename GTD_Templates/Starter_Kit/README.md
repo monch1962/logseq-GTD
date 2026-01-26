@@ -7,11 +7,11 @@ This starter kit contains the 5 essential templates you need to begin implementi
 ## 📦 What's Included
 
 ### **Core 5 Templates:**
-1. **[Quick Capture](../Phase1/01-quick-capture.md)** - Capture thoughts instantly
-2. **[Daily Journal](../Phase1/05-gtd-daily-journal.md)** - Plan your day
-3. **[2-Minute Rule](../Phase1/09-2-minute-rule.md)** - Make quick decisions
-4. **[Priority System](../Phase1/03-basic-priority-system.md)** - Organize by importance
-5. **[Weekly Review](../Phase1/08-weekly-review.md)** - Maintain your system
+1. **[Quick Capture](../Capture/01-quick-capture.md)** - Capture thoughts instantly
+2. **[Daily Journal](../Review/05-gtd-daily-journal.md)** - Plan your day
+3. **[2-Minute Rule](../Process/09-2-minute-rule.md)** - Make quick decisions
+4. **[Priority System](../Organize/03-basic-priority-system.md)** - Organize by importance
+5. **[Weekly Review](../Review/08-weekly-review.md)** - Maintain your system
 
 ## 🎯 Why These 5 Templates?
 
@@ -203,7 +203,7 @@ Visit the [Complete Template Index](../index.md) to explore all 16 templates and
 - Try the troubleshooting section
 
 ### **Community Support:**
-- Visit [GTD Learning Center](../Phase2/14-gtd-learning-center.md)
+- Visit [GTD Learning Center](../Improve/14-gtd-learning-center.md)
 - Join Logseq community forums
 - Search for GTD implementation guides
 

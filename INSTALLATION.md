@@ -43,10 +43,15 @@
 3. Copy all template files:
    ```bash
    # Copy Phase 1 templates
-   cp Phase1/*.md ~/logseq/templates/
+   # For beginners: Start with Starter Kit
+   cp Starter_Kit/*.md ~/logseq/templates/
    
-   # Copy Phase 2 templates (optional, start with Phase 1)
-   cp Phase2/*.md ~/logseq/templates/
+   # For complete system: Copy all templates
+   # cp -r Capture/ Process/ Organize/ Review/ Engage/ Improve/ System/ ~/logseq/templates/
+   
+   # Copy additional templates as needed (optional)
+   # cp Organize/*.md ~/logseq/templates/
+   # cp Improve/*.md ~/logseq/templates/
    ```
 
 #### Option B: Logseq Template Folder

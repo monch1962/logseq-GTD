@@ -6,9 +6,18 @@ This is a **Logseq GTD (Getting Things Done) template system** - a collection of
 ## Repository Structure
 ```
 logseq-GTD/
-├── GTD_Templates/              # Main template system
-│   ├── Phase1/                 # Core GTD foundation (10 templates)
-│   └── Phase2/                 # Integrated FAQ solution (5 templates)
+├── GTD_Templates/              # Main template system (organized by GTD phase)
+│   ├── Capture/                # Collect everything that has your attention
+│   ├── Process/                # Process what each item means
+│   ├── Organize/               # Put everything in the right place
+│   ├── Review/                 # Review and update your system
+│   ├── Engage/                 # Actually do the work
+│   ├── Improve/                # Enhance and optimize your system
+│   ├── System/                 # System validation and testing
+│   ├── Starter_Kit/            # 5-template beginner package
+│   ├── Phase1/                 # Backward compatibility (symlinks)
+│   ├── Phase2/                 # Backward compatibility (symlinks)
+│   └── index.md               # Complete template index
 ├── research/                   # Research and planning documents
 ├── queries/                    # Logseq query examples
 ├── templates/                  # Legacy templates (deprecated)

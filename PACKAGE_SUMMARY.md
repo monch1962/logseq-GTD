@@ -12,27 +12,35 @@
 
 ## **What's Included**
 
-### **1. Core Template System (15 Templates)**
+### **1. Core Template System (16 Templates - Organized by GTD Phase)**
 ```
 GTD_Templates/
-├── Phase1/ (10 Core GTD Foundation Templates)
-│   ├── 01-quick-capture.md          # Ultra-fast mobile capture
+├── Capture/ (1 template)
+│   └── 01-quick-capture.md          # Ultra-fast mobile capture
+├── Process/ (2 templates)
 │   ├── 02-task-processing.md        # GTD clarification workflow
+│   └── 09-2-minute-rule.md          # Quick task processing
+├── Organize/ (4 templates)
 │   ├── 03-basic-priority-system.md  # Priority management
 │   ├── 04-context-manager.md        # MRU dropdowns (10 items)
+│   ├── 11-gtd-management-dashboard.md    # Waiting-for + Someday/Maybe + Reference
+│   └── 16-areas-of-responsibility.md     # Areas of Responsibility
+├── Review/ (2 templates)
 │   ├── 05-gtd-daily-journal.md      # Daily integration with customizable views
+│   └── 08-weekly-review.md          # Comprehensive weekly review
+├── Engage/ (2 templates)
 │   ├── 06-next-actions-dashboard.md # GTD criteria filtering
-│   ├── 07-project-next-action-enforcement.md # Project management
-│   ├── 08-weekly-review.md          # Comprehensive weekly review
-│   ├── 09-2-minute-rule.md          # Quick task processing
-│   └── 10-cross-platform-test.md    # Mobile/desktop testing
-│
-└── Phase2/ (5 Integrated FAQ Solution Templates)
-    ├── 11-gtd-management-dashboard.md    # Waiting-for + Someday/Maybe + Reference
-    ├── 12-gtd-integration-hub.md         # Email + Calendar + External Tools
-    ├── 13-gtd-analytics-improvement.md   # Metrics + Continuous Improvement
-    ├── 14-gtd-learning-center.md         # Education + Tutorials + Community
-    └── 15-integrated-faq-test.md         # Comprehensive testing
+│   └── 07-project-next-action-enforcement.md # Project management
+├── Improve/ (3 templates)
+│   ├── 12-gtd-integration-hub.md         # Email + Calendar + External Tools
+│   ├── 13-gtd-analytics-improvement.md   # Metrics + Continuous Improvement
+│   └── 14-gtd-learning-center.md         # Education + Tutorials + Community
+├── System/ (2 templates)
+│   ├── 10-cross-platform-test.md    # Mobile/desktop testing
+│   └── 15-integrated-faq-test.md    # Comprehensive testing
+├── Starter_Kit/ (5 essential templates for beginners)
+├── Phase1/ (Backward compatibility - symlinks to new locations)
+└── Phase2/ (Backward compatibility - symlinks to new locations)
 ```
 
 ### **2. Complete Documentation**

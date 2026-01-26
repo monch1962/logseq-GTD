@@ -4,34 +4,67 @@
 
 A comprehensive Getting Things Done (GTD) implementation using pure Logseq templates with integrated FAQ coverage. This system addresses common GTD challenges through an integrated dashboard approach.
 
-## 📁 Template Structure
+## 📁 Template Structure (Reorganized by GTD Phase)
 
-### Phase 1: Core GTD Foundation
-**Location:** `Phase1/`
+**Note:** Templates are now organized by GTD workflow phase. The old `Phase1/` and `Phase2/` directories contain symlinks for backward compatibility.
+
+### Capture Phase
+**Location:** `Capture/`
 
 | Template | Purpose | Key Features |
 |----------|---------|--------------|
-| **[01-quick-capture.md](Phase1/01-quick-capture.md)** | Ultra-fast task capture | Mobile optimized, voice support, cross-platform |
-| **[02-task-processing.md](Phase1/02-task-processing.md)** | Inbox processing workflow | GTD decision tree, 2-minute rule integration |
-| **[03-basic-priority-system.md](Phase1/03-basic-priority-system.md)** | Priority management | HIGH/MEDIUM/LOW with due dates, urgency calculation |
-| **[04-context-manager.md](Phase1/04-context-manager.md)** | Context management | MRU dropdowns (10 items), creation prompts |
-| **[05-gtd-daily-journal.md](Phase1/05-gtd-daily-journal.md)** | Daily GTD integration | Customizable next actions, context filtering, stats |
-| **[06-next-actions-dashboard.md](Phase1/06-next-actions-dashboard.md)** | Next actions management | GTD criteria filtering, priority views, compliance checks |
-| **[07-project-next-action-enforcement.md](Phase1/07-project-next-action-enforcement.md)** | Project management | Next action requirement, quality checks, integration |
-| **[08-weekly-review.md](Phase1/08-weekly-review.md)** | Weekly GTD review | Comprehensive checklist, reminder system, metrics |
-| **[09-2-minute-rule.md](Phase1/09-2-minute-rule.md)** | Quick task processing | Decision guidance, time estimation, statistics |
-| **[10-cross-platform-test.md](Phase1/10-cross-platform-test.md)** | Platform testing | Mobile/desktop validation, performance targets |
+| **[01-quick-capture.md](Capture/01-quick-capture.md)** | Ultra-fast task capture | Mobile optimized, voice support, cross-platform |
 
-### Phase 2: Integrated FAQ Solution  
-**Location:** `Phase2/`
+### Process Phase
+**Location:** `Process/`
 
-| Template | FAQ Coverage | Integrated Components |
-|----------|--------------|----------------------|
-| **[11-gtd-management-dashboard.md](Phase2/11-gtd-management-dashboard.md)** | Waiting-for, Someday/Maybe, Reference | Three GTD components in one dashboard |
-| **[12-gtd-integration-hub.md](Phase2/12-gtd-integration-hub.md)** | Email, Calendar, External Tools | Unified external tool integration |
-| **[13-gtd-analytics-improvement.md](Phase2/13-gtd-analytics-improvement.md)** | System health, Continuous improvement | Metrics, trends, optimization recommendations |
-| **[14-gtd-learning-center.md](Phase2/14-gtd-learning-center.md)** | Education, Troubleshooting, Community | Learning paths, tutorials, best practices |
-| **[15-integrated-faq-test.md](Phase2/15-integrated-faq-test.md)** | Solution validation | Comprehensive testing framework |
+| Template | Purpose | Key Features |
+|----------|---------|--------------|
+| **[02-task-processing.md](Process/02-task-processing.md)** | Inbox processing workflow | GTD decision tree, 2-minute rule integration |
+| **[09-2-minute-rule.md](Process/09-2-minute-rule.md)** | Quick task processing | Decision guidance, time estimation, statistics |
+
+### Organize Phase
+**Location:** `Organize/`
+
+| Template | Purpose | Key Features |
+|----------|---------|--------------|
+| **[03-basic-priority-system.md](Organize/03-basic-priority-system.md)** | Priority management | HIGH/MEDIUM/LOW with due dates, urgency calculation |
+| **[04-context-manager.md](Organize/04-context-manager.md)** | Context management | MRU dropdowns (10 items), creation prompts |
+| **[11-gtd-management-dashboard.md](Organize/11-gtd-management-dashboard.md)** | Waiting-for, Someday/Maybe, Reference | Three GTD components in one dashboard |
+| **[16-areas-of-responsibility.md](Organize/16-areas-of-responsibility.md)** | Areas of Responsibility | Life/work area definition and management |
+
+### Review Phase
+**Location:** `Review/`
+
+| Template | Purpose | Key Features |
+|----------|---------|--------------|
+| **[05-gtd-daily-journal.md](Review/05-gtd-daily-journal.md)** | Daily GTD integration | Customizable next actions, context filtering, stats |
+| **[08-weekly-review.md](Review/08-weekly-review.md)** | Weekly GTD review | Comprehensive checklist, reminder system, metrics |
+
+### Engage Phase
+**Location:** `Engage/`
+
+| Template | Purpose | Key Features |
+|----------|---------|--------------|
+| **[06-next-actions-dashboard.md](Engage/06-next-actions-dashboard.md)** | Next actions management | GTD criteria filtering, priority views, compliance checks |
+| **[07-project-next-action-enforcement.md](Engage/07-project-next-action-enforcement.md)** | Project management | Next action requirement, quality checks, integration |
+
+### Improve Phase
+**Location:** `Improve/`
+
+| Template | Purpose | Key Features |
+|----------|---------|--------------|
+| **[12-gtd-integration-hub.md](Improve/12-gtd-integration-hub.md)** | Email, Calendar, External Tools | Unified external tool integration |
+| **[13-gtd-analytics-improvement.md](Improve/13-gtd-analytics-improvement.md)** | System health, Continuous improvement | Metrics, trends, optimization recommendations |
+| **[14-gtd-learning-center.md](Improve/14-gtd-learning-center.md)** | Education, Troubleshooting, Community | Learning paths, tutorials, best practices |
+
+### System Phase
+**Location:** `System/`
+
+| Template | Purpose | Key Features |
+|----------|---------|--------------|
+| **[10-cross-platform-test.md](System/10-cross-platform-test.md)** | Platform testing | Mobile/desktop validation, performance targets |
+| **[15-integrated-faq-test.md](System/15-integrated-faq-test.md)** | Solution validation | Comprehensive testing framework |
 
 ## 🔄 How It Works
 
@@ -116,10 +149,10 @@ Instead of separate templates for each FAQ, we use **integrated dashboards** tha
 ## 🚀 Getting Started
 
 ### Quick Start (30 Minutes)
-1. **Start with:** [`Phase1/05-gtd-daily-journal.md`](Phase1/05-gtd-daily-journal.md)
-2. **Add:** [`Phase1/01-quick-capture.md`](Phase1/01-quick-capture.md) for capture
-3. **Use:** [`Phase1/02-task-processing.md`](Phase1/02-task-processing.md) for clarification
-4. **Review with:** [`Phase1/08-weekly-review.md`](Phase1/08-weekly-review.md)
+1. **Start with:** [`Review/05-gtd-daily-journal.md`](Review/05-gtd-daily-journal.md)
+2. **Add:** [`Capture/01-quick-capture.md`](Capture/01-quick-capture.md) for capture
+3. **Use:** [`Process/02-task-processing.md`](Process/02-task-processing.md) for clarification
+4. **Review with:** [`Review/08-weekly-review.md`](Review/08-weekly-review.md)
 
 ### Progressive Enhancement
 **Week 1-2:** Phase 1 templates only
@@ -182,12 +215,12 @@ Weekly Review (08) connects all components
 ```
 
 ### Quick Access Points
-- **Daily:** [`05-gtd-daily-journal.md`](Phase1/05-gtd-daily-journal.md)
-- **Next actions:** [`06-next-actions-dashboard.md`](Phase1/06-next-actions-dashboard.md)
-- **Waiting/ideas/references:** [`11-gtd-management-dashboard.md`](Phase2/11-gtd-management-dashboard.md)
-- **Email/calendar:** [`12-gtd-integration-hub.md`](Phase2/12-gtd-integration-hub.md)
-- **Improvement:** [`13-gtd-analytics-improvement.md`](Phase2/13-gtd-analytics-improvement.md)
-- **Learning:** [`14-gtd-learning-center.md`](Phase2/14-gtd-learning-center.md)
+- **Daily:** [`Review/05-gtd-daily-journal.md`](Review/05-gtd-daily-journal.md)
+- **Next actions:** [`Engage/06-next-actions-dashboard.md`](Engage/06-next-actions-dashboard.md)
+- **Waiting/ideas/references:** [`Organize/11-gtd-management-dashboard.md`](Organize/11-gtd-management-dashboard.md)
+- **Email/calendar:** [`Improve/12-gtd-integration-hub.md`](Improve/12-gtd-integration-hub.md)
+- **Improvement:** [`Improve/13-gtd-analytics-improvement.md`](Improve/13-gtd-analytics-improvement.md)
+- **Learning:** [`Improve/14-gtd-learning-center.md`](Improve/14-gtd-learning-center.md)
 
 ## ✅ Success Metrics
 
@@ -215,7 +248,7 @@ Weekly Review (08) connects all components
 
 ### Getting Help
 - **Documentation:** This README and template comments
-- **Testing:** [`Phase1/10-cross-platform-test.md`](Phase1/10-cross-platform-test.md)
+- **Testing:** [`System/10-cross-platform-test.md`](System/10-cross-platform-test.md)
 - **Community:** GTD Learning Center community section
 - **Improvement:** Analytics dashboard recommendations
 
