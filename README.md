@@ -1,6 +1,6 @@
 # Logseq GTD Template System
 
-A comprehensive, plugin-free Getting Things Done (GTD) implementation for Logseq with intelligent task selection, mobile optimization, and integrated FAQ coverage.
+A comprehensive, plugin-free Getting Things Done (GTD) implementation for Logseq featuring a centralized query library, intelligent task selection, mobile optimization, and integrated FAQ coverage.
 
 ## Complete Package Structure
 
@@ -53,7 +53,13 @@ logseq-GTD/
 
 ## Key Features
 
-### 🚀 **Intelligent Task Selection**
+### 🚀 **Centralized Query Library**
+- **46 reusable components**: Organized across 12 GTD categories
+- **Performance optimized**: Faster execution on mobile and desktop
+- **Consistent behavior**: Standardized queries across all templates
+- **Easy maintenance**: Update queries in one place, benefit everywhere
+
+### 🎯 **Intelligent Task Selection**
 - **Context-aware filtering**: Tasks filtered by location/context with MRU dropdowns
 - **Priority system**: HIGH/MEDIUM/LOW with customizable thresholds
 - **Time & energy matching**: Suggest tasks based on available resources
@@ -176,14 +182,34 @@ For questions, customization, or contributions:
 3. Refer to the [testing checklist](TESTING_CHECKLIST.md) for troubleshooting
 4. Customize templates to fit your specific workflow
 
+## New in Version 1.1.0
+
+### 🆕 **Query Library System**
+- **46 reusable query components** across 12 categories
+- **Performance optimized** for mobile and desktop
+- **Centralized maintenance** - update once, benefit everywhere
+- **Comprehensive documentation** included
+
+### 📚 **New Documentation**
+- **[QUERY_LIBRARY_GUIDE.md](QUERY_LIBRARY_GUIDE.md)** - Complete reference for developers and users
+- **[MIGRATION_GUIDE.md](MIGRATION_GUIDE.md)** - Step-by-step migration for existing users
+- **[TESTING_REPORT.md](TESTING_REPORT.md)** - Comprehensive validation results
+- **[TESTING_FRAMEWORK.md](TESTING_FRAMEWORK.md)** - Automated testing framework
+
+### 🔄 **Migration Support**
+- **Backward compatible** - your existing data works unchanged
+- **Incremental update** - migrate templates at your own pace
+- **Performance benefits** - faster queries, better mobile experience
+- **Support available** - documentation and troubleshooting guides
+
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
-**Version**: 1.1.0 (Reorganized by GTD Phase)  
+**Version**: 1.1.0 (Query Library Edition)  
 **Last Updated**: January 2026  
 **Compatibility**: Logseq Desktop & Mobile  
 **Methodology**: Getting Things Done (GTD)  
-**Approach**: Guided implementation with customizable defaults  
-**Organization**: Templates now organized by GTD workflow phase (Capture, Process, Organize, Review, Engage, Improve, System)
+**Approach**: Guided implementation with query library optimization  
+**Organization**: Templates organized by GTD workflow phase with centralized query library
