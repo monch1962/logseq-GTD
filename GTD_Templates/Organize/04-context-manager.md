@@ -33,23 +33,7 @@ Contexts define **where** or **with what** you can do a task. They help you:
 ## 🔄 MRU Context Selection (Last 10 Used)
 
 ### Select Existing Context
-{{query {:title "🎯 Select Context (Last 10 Used)"
-         :query [:find (pull ?p [:block/name :block/properties])
-                 :where 
-                 [?p :block/name ?name]
-                 [(clojure.string/starts-with? ?name "@")]
-                 [?p :block/properties ?props]
-                 [(get ?props :last-used) ?last-used]
-                 [(not= ?last-used nil)]]
-         :limit 10
-         :sort-by :last-used
-         :sort-dir :desc
-         :result-transform (fn [results]
-                             (map (fn [r] 
-                                    {:title (:block/name r)
-                                     :description (str "Last used: " 
-                                                     (get-in r [:block/properties :last-used]))})
-                                  results))}}}
+{{query (read-file "queries/library/context/selection.clj")}}}
 
 ### Or Create New Context
 **New Context Name:** @{{new-context-name}}
@@ -89,30 +73,15 @@ last-used:: {{now}}
 - [[@{{related-context-2}}]]
 
 ## Statistics
-{{query {:title "📊 Tasks in this context"
-         :query [:find (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :context) "@{{context-name}}"]]
-         :view :text}}}
+{{query (assoc (read-file "queries/library/context/tasks-by-context.clj")
+                :title "📊 Tasks in @{{context-name}}")
+         :inputs ["@{{context-name}}"]}}
 ```
 
 ## 🛠️ Context Management Tools
 
 ### Context Usage Dashboard
-{{query {:title "📈 Most Used Contexts"
-         :query [:find ?context (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :context) ?context]
-                 [?context-page :block/name ?context]
-                 [?context-page :block/properties ?ctx-props]
-                 [(get ?ctx-props :last-used) ?last-used]]
-         :group-by ?context
-         :sort-by (count ?b)
-         :sort-dir :desc
-         :limit 10
-         :view :table}}}
+{{query (read-file "queries/library/context/most-used.clj")}}
 
 ### Context Last Used
 {{query {:title "🕒 Context Recency"

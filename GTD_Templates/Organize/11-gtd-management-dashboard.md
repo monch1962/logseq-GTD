@@ -22,20 +22,7 @@ gtd-compliance:: Integrated FAQ solution
 ### Waiting For Dashboard
 
 #### Active Waiting For Items
-{{query {:title "⏳ Active Waiting For Items"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "waiting-for"]
-                 [(get ?props :status) "waiting"]]
-         :result-transform (fn [results]
-                             (map (fn [r]
-                                    {:title (str "⏳ " (:block/content r))
-                                     :description (str "From: " (get-in r [:block/properties :from] "Unknown")
-                                                    " | Expected: " (get-in r [:block/properties :expected-by] "None")
-                                                    " | Follow-up: " (get-in r [:block/properties :followup-date] "None"))
-                                     :url (str "#" (:block/uuid r))})
-                                  results))}}}
+{{query (read-file "queries/library/dashboard/waiting-for-items.clj")}}}
 
 #### Overdue Follow-ups
 {{query {:title "⚠️ Overdue Follow-ups"

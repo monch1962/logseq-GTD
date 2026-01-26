@@ -92,28 +92,12 @@ Will it take <2 minutes?
 ## 📋 2-Minute Task Finder
 
 ### Current 2-Minute Tasks
-{{query {:title "⚡ Tasks Under 2 Minutes"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/marker "TODO"]
-                 [?b :block/properties ?props]
-                 [(get ?props :time-estimate) ?est]
-                 [(<= ?est 2)]
-                 [(get ?props :status) "not-started"]]
-         :limit 10
-         :result-transform (fn [results]
-                             (map (fn [r]
-                                    {:title (str "• " (:block/content r))
-                                     :description (str "Context: " (get-in r [:block/properties :context] "?")
-                                                    " | Priority: " (get-in r [:block/properties :priority] "MEDIUM"))
-                                     :url (str "#" (:block/uuid r))
-                                     :action "Do now"})
-                                  results))}}}
+{{query (read-file "queries/library/rules/tasks-under-2min.clj")}}}
 
 ### Quick Context-Based 2-Minute Tasks
-**@computer quick tasks:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@computer"] [(get ?props :time-estimate) ?est] [(<= ?est 2)] [(get ?props :status) "not-started"]] :view :text}}}
-**@phone quick tasks:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@phone"] [(get ?props :time-estimate) ?est] [(<= ?est 2)] [(get ?props :status) "not-started"]] :view :text}}}
-**@errands quick tasks:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@errands"] [(get ?props :time-estimate) ?est] [(<= ?est 2)] [(get ?props :status) "not-started"]] :view :text}}}
+**@computer quick tasks:** {{query (assoc (read-file "queries/library/rules/context-quick-tasks.clj") :title "Quick tasks for @computer") :inputs ["@computer"]}}
+**@phone quick tasks:** {{query (assoc (read-file "queries/library/rules/context-quick-tasks.clj") :title "Quick tasks for @phone") :inputs ["@phone"]}}
+**@errands quick tasks:** {{query (assoc (read-file "queries/library/rules/context-quick-tasks.clj") :title "Quick tasks for @errands") :inputs ["@errands"]}}
 
 ## 🛠️ 2-Minute Rule Tools
 

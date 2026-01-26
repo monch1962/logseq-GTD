@@ -114,32 +114,13 @@ gtd-compliance:: Clarify phase - Process inbox to zero with GTD methodology
 ## 📊 Processing Dashboard
 
 ### Inbox Status
-{{query {:title "📥 Inbox Status"
-         :query [:find (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :status) "unprocessed"]]
-         :view :text}}}
+{{query (read-file "queries/library/capture/inbox-status.clj")}}
 
 ### Today's Processing
-{{query {:title "🔄 Processed Today"
-         :query [:find (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :processed) ?processed]
-                 [(clojure.string/includes? ?processed "{{today}}")]]
-         :view :text}}}
+{{query (read-file "queries/library/process/processed-today.clj")}}
 
 ### Processing Time Analysis
-{{query {:title "⏱️ Average Processing Time"
-         :query [:find (avg ?processing-time)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :captured) ?captured]
-                 [(get ?props :processed) ?processed]
-                 ; Calculate time difference
-                 ]]
-         :view :text}}}
+{{query (read-file "queries/library/process/average-processing-time.clj")}}
 
 ## 🛠️ Processing Tools
 
