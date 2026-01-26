@@ -25,26 +25,10 @@ gtd-compliance:: Integrated FAQ solution
 {{query (read-file "queries/library/dashboard/waiting-for-items.clj")}}}
 
 #### Overdue Follow-ups
-{{query {:title "⚠️ Overdue Follow-ups"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "waiting-for"]
-                 [(get ?props :status) "waiting"]
-                 [(get ?props :followup-date) ?followup]
-                 [(< ?followup "{{today}}")]]
-         :limit 5}}}
+{{query (read-file "queries/library/dashboard/overdue-follow-ups.clj")}}}
 
 #### Recently Completed
-{{query {:title "✅ Recently Completed"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "waiting-for"]
-                 [(get ?props :status) "completed"]
-                 [(get ?props :completed-date) ?completed]
-                 [(clojure.string/includes? ?completed "{{this-week}}")]]
-         :limit 5}}}
+{{query (read-file "queries/library/dashboard/recently-completed-waiting.clj")}}}
 
 ### Waiting For Template
 ```markdown
@@ -67,8 +51,8 @@ gtd-compliance:: Integrated FAQ solution
 ```
 
 ### Waiting For Statistics
-- **Active items:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :type) "waiting-for"] [(get ?props :status) "waiting"]] :view :text}}}
-- **Overdue:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :type) "waiting-for"] [(get ?props :status) "waiting"] [(get ?props :followup-date) ?followup] [(< ?followup "{{today}}")]] :view :text}}}
+- **Active items:** {{query (read-file "queries/library/dashboard/waiting-active-count.clj")}}
+- **Overdue:** {{query (read-file "queries/library/dashboard/overdue-follow-ups.clj") :view :text}}
 - **Avg wait time:** {{average-wait-time}} days
 - **Completion rate:** {{completion-rate}}%
 
@@ -82,35 +66,13 @@ gtd-compliance:: Integrated FAQ solution
 ### Someday/Maybe Dashboard
 
 #### By Category
-{{query {:title "🔮 Someday/Maybe by Category"
-         :query [:find ?category (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "someday-maybe"]
-                 [(get ?props :category) ?category]]
-         :group-by ?category
-         :sort-by (count ?b)
-         :sort-dir :desc
-         :view :table}}}
+{{query (read-file "queries/library/dashboard/someday-by-category.clj")}}}
 
 #### High Interest Items
-{{query {:title "🌟 High Interest Someday/Maybe"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "someday-maybe"]
-                 [(get ?props :interest) "high"]]
-         :limit 5}}}
+{{query (read-file "queries/library/dashboard/high-interest-someday.clj")}}}
 
 #### Ready for Promotion
-{{query {:title "🚀 Ready for Active Consideration"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "someday-maybe"]
-                 [(get ?props :readiness) "high"]
-                 [(get ?props :timeline) "short"]]
-         :limit 5}}}
+{{query (read-file "queries/library/dashboard/ready-for-consideration.clj")}}}
 
 ### Someday/Maybe Template
 ```markdown
@@ -137,7 +99,7 @@ gtd-compliance:: Integrated FAQ solution
 ```
 
 ### Someday/Maybe Statistics
-- **Total items:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :type) "someday-maybe"]] :view :text}}}
+- **Total items:** {{query (read-file "queries/library/dashboard/total-someday-items.clj")}}
 - **By interest:** High: {{high-interest}}, Medium: {{medium-interest}}, Low: {{low-interest}}
 - **Promotion rate:** {{promotion-rate}}% (to active projects)
 - **Archive rate:** {{archive-rate}}% (removed as no longer relevant)
@@ -152,40 +114,13 @@ gtd-compliance:: Integrated FAQ solution
 ### Reference Dashboard
 
 #### By Tag/Category
-{{query {:title "📚 References by Tag"
-         :query [:find ?tag (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "reference"]
-                 [?b :block/refs ?t]
-                 [?t :block/name ?tag]]
-         :group-by ?tag
-         :sort-by (count ?b)
-         :sort-dir :desc
-         :limit 10
-         :view :table}}}
+{{query (read-file "queries/library/dashboard/references-by-tag.clj")}}}
 
 #### Recently Added
-{{query {:title "🆕 Recent References"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "reference"]
-                 [(get ?props :filed) ?filed]
-                 [(clojure.string/includes? ?filed "{{this-month}}")]]
-         :limit 5}}}
+{{query (read-file "queries/library/dashboard/recent-references.clj")}}}
 
 #### Most Useful (Based on access)
-{{query {:title "⭐ Most Useful References"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :type) "reference"]
-                 [(get ?props :access-count) ?count]
-                 [(> ?count 5)]]
-         :sort-by :access-count
-         :sort-dir :desc
-         :limit 5}}}
+{{query (read-file "queries/library/dashboard/most-useful-references.clj")}}}
 
 ### Reference Template
 ```markdown
@@ -216,7 +151,7 @@ gtd-compliance:: Integrated FAQ solution
 ```
 
 ### Reference Statistics
-- **Total references:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :type) "reference"]] :view :text}}}
+- **Total references:** {{query (read-file "queries/library/dashboard/total-references.clj")}}
 - **By source:** Web: {{web-count}}, Books: {{book-count}}, Documents: {{doc-count}}
 - **Access frequency:** {{average-access}} times per reference
 - **Organization score:** {{organization-score}}/100
