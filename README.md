@@ -25,6 +25,7 @@ logseq-GTD/
 │   │   ├── [14-gtd-learning-center.md](GTD_Templates/Phase2/14-gtd-learning-center.md)
 │   │   └── [15-integrated-faq-test.md](GTD_Templates/Phase2/15-integrated-faq-test.md)
 │   └── [README.md](GTD_Templates/README.md)               # Template overview and usage
+├── Starter_Kit/                # 5-template beginner package
 ├── research/                   # Research and documentation
 ├── queries/                    # Logseq query examples
 ├── templates/                  # Legacy templates
@@ -88,8 +89,16 @@ logseq-GTD/
 
 ## Quick Start
 
-### Installation
-1. **Copy templates**: Copy the `GTD_Templates/` folder to your Logseq graph
+### Installation Options
+
+#### **Option A: Beginner (Recommended)**
+1. **Start with Starter Kit**: Copy `GTD_Templates/Starter_Kit/` folder only
+2. **Follow beginner guide**: Read [Starter Kit README](GTD_Templates/Starter_Kit/README.md)
+3. **Use 5 core templates**: Quick Capture, Daily Journal, 2-Minute Rule, Priority System, Weekly Review
+4. **Add more later**: Expand to full system after 1 month
+
+#### **Option B: Complete System**
+1. **Copy all templates**: Copy the entire `GTD_Templates/` folder
 2. **Configure templates**: Follow instructions in [INSTALLATION.md](INSTALLATION.md)
 3. **Test workflow**: Use [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) to verify installation
 4. **Customize settings**: Adjust priorities, contexts, and action counts as needed

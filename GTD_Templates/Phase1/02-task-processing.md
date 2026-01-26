@@ -1,7 +1,8 @@
 template:: GTD Task Processing
-description:: Process inbox items into organized tasks with GTD metadata
+description:: Complete inbox processing workflow with GTD decision tree
 version:: 1.0
 compatibility:: Logseq mobile & desktop
+gtd-compliance:: Clarify phase - Process inbox to zero with GTD methodology
 
 # GTD Task Processing
 

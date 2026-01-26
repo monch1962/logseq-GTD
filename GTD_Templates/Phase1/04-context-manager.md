@@ -1,7 +1,8 @@
 template:: GTD Context Manager
-description:: MRU-based context selection with creation prompts (10-item limit)
+description:: Context management with MRU dropdowns and creation prompts
 version:: 1.0
 compatibility:: Logseq mobile & desktop
+gtd-compliance:: Organize phase - Context-based task organization and filtering
 
 # GTD Context Manager
 

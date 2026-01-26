@@ -1,3 +1,9 @@
+template:: GTD Cross-Platform Test
+description:: Comprehensive testing framework for mobile and desktop compatibility
+version:: 1.0
+compatibility:: Logseq mobile & desktop
+gtd-compliance:: System validation - Cross-platform GTD workflow verification
+
 # Cross-Platform Functionality Test
 
 ## 🎯 Test Objectives
