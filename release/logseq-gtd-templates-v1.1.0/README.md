@@ -119,65 +119,34 @@ logseq-GTD/
 
 ## Quick Start
 
-## 🚀 Quick Start
+### Installation Options
 
-### 📥 Installation Options
+#### **Option A: Beginner (Recommended)**
+1. **Start with Starter Kit**: Copy `GTD_Templates/Starter_Kit/` folder only
+2. **Follow beginner guide**: Read [Starter Kit README](GTD_Templates/Starter_Kit/README.md)
+3. **Use 5 core templates**: Quick Capture, Daily Journal, 2-Minute Rule, Priority System, Weekly Review
+4. **Add more later**: Expand to full system after 1 month
 
-#### **Option A: Beginner (Recommended) - 5 Minutes**
-```bash
-# 1. Download the release package
-# 2. Copy only the Starter_Kit/ folder
-cp -r GTD_Templates/Starter_Kit/ ~/logseq/templates/
+#### **Option B: Complete System**
+1. **Copy all templates**: Copy the entire `GTD_Templates/` folder
+2. **Configure templates**: Follow instructions in [INSTALLATION.md](INSTALLATION.md)
+3. **Test workflow**: Use [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) to verify installation
+4. **Customize settings**: Adjust priorities, contexts, and action counts as needed
 
-# 3. Start with these 5 essential templates:
-#    - 01-quick-capture.md      📱 Ultra-fast mobile capture
-#    - 03-basic-priority-system.md 🎯 Priority management  
-#    - 05-gtd-daily-journal.md  📊 Daily workflow
-#    - 08-weekly-review.md      🔄 Weekly review
-#    - 09-2-minute-rule.md      ⚡ Quick task processing
-```
+### Basic Workflow
+1. **Capture**: Use quick capture template for any thought/task
+2. **Process**: Clarify items using task processing template
+3. **Organize**: Assign contexts, priorities, and projects
+4. **Review**: Check daily journal for priority tasks
+5. **Execute**: Use next actions dashboard to select tasks
+6. **Reflect**: Complete weekly review for continuous improvement
 
-#### **Option B: Complete System - 10 Minutes**
-```bash
-# 1. Download the release package
-# 2. Copy the entire GTD_Templates/ folder
-cp -r GTD_Templates/ ~/logseq/templates/
-
-# 3. Follow the installation guide
-open INSTALLATION.md
-
-# 4. Test your installation
-open TESTING_CHECKLIST.md
-```
-
-### 📱 Mobile Installation
-```
-iOS: Copy via Files app → Logseq/templates/
-Android: Copy to Android/data/com.logseq.app/files/templates/
-```
-
-### 🎯 First 30 Minutes
-1. **Test Quick Capture** (<10 seconds on mobile)
-2. **Set up Daily Journal** (customize next actions: 3-10)
-3. **Configure Contexts** (@computer, @phone, @home, @errands)
-4. **Try 2-Minute Rule** (process quick tasks immediately)
-
-### 🔄 Complete GTD Workflow
-```
-1. 📥 CAPTURE: Quick capture any thought/task
-2. 🔍 PROCESS: Clarify using task processing template  
-3. 🗂️ ORGANIZE: Assign contexts, priorities, projects
-4. 📊 REVIEW: Check daily journal for priority tasks
-5. ⚡ ENGAGE: Use next actions dashboard to select tasks
-6. 🔄 REFLECT: Complete weekly review for improvement
-```
-
-### ⚡ Advanced Features
-- **📱 Mobile optimization**: All templates work on mobile Logseq
-- **🔄 Context switching**: MRU dropdowns for quick context changes
-- **🎯 Priority filtering**: Customizable HIGH/MEDIUM/LOW thresholds
-- **❓ Integrated FAQ**: Comprehensive help within templates
-- **📈 Analytics**: Track progress and identify improvement areas
+### Advanced Features
+- **Mobile optimization**: All templates work on mobile Logseq
+- **Context switching**: MRU dropdowns for quick context changes
+- **Priority filtering**: Customizable HIGH/MEDIUM/LOW thresholds
+- **Integrated FAQ**: Comprehensive help within templates
+- **Analytics**: Track progress and identify improvement areas
 
 ## System Requirements
 
