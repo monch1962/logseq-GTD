@@ -189,7 +189,7 @@ Desktop.ini
 *.odp
 *.rtf
 *.txt
-*.md
+!*.md  # Allow markdown files (templates are markdown)
 *.markdown
 *.tex
 
