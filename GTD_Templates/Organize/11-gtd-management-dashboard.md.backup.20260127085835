@@ -71,13 +71,13 @@ mobile-optimized:: true
 ### Someday/Maybe Dashboard
 
 #### By Category
-{{query (read-file "queries/library/dashboard/someday-by-category.clj")}}
+{{query (read-file "queries/library/dashboard/someday-by-category.clj")}}}
 
 #### High Interest Items
-{{query (read-file "queries/library/dashboard/high-interest-someday.clj")}}
+{{query (read-file "queries/library/dashboard/high-interest-someday.clj")}}}
 
 #### Ready for Promotion
-{{query (read-file "queries/library/dashboard/ready-for-consideration.clj")}}
+{{query (read-file "queries/library/dashboard/ready-for-consideration.clj")}}}
 
 ### Someday/Maybe Template
 ```markdown
@@ -119,13 +119,13 @@ mobile-optimized:: true
 ### Reference Dashboard
 
 #### By Tag/Category
-{{query (read-file "queries/library/dashboard/references-by-tag.clj")}}
+{{query (read-file "queries/library/dashboard/references-by-tag.clj")}}}
 
 #### Recently Added
-{{query (read-file "queries/library/dashboard/recent-references.clj")}}
+{{query (read-file "queries/library/dashboard/recent-references.clj")}}}
 
 #### Most Useful (Based on access)
-{{query (read-file "queries/library/dashboard/most-useful-references.clj")}}
+{{query (read-file "queries/library/dashboard/most-useful-references.clj")}}}
 
 ### Reference Template
 ```markdown

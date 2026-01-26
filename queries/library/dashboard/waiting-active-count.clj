@@ -1,10 +1,14 @@
 ;; Waiting For Active Items Count Query
-;; Usage: {{query (read-file "queries/library/dashboard/waiting-active-count.clj")}}
+;; Usage: {{query (read-file "queries/library/dashboard/waiting-active-count.clj")}
 ;; Count of active waiting-for items
 
 {:query [:find (count ?b)
-         :where
-         [?b :block/properties ?props]
-         [(get ?props :type) "waiting-for"]
-         [(get ?props :status) "waiting"]]
- :view :text}
+:where
+[?b :block/properties ?props]
+[(get ?props :type) "waiting-for"]
+[(get ?props :status) "waiting"]]
+:view :text
+ :cache-enabled true
+ :cache-key "waiting-active-count"
+ :cache-ttl 300
+ :mobile-ttl 600}

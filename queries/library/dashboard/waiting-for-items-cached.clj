@@ -1,8 +1,8 @@
 ;; Waiting For Items Query with Caching
-;; Usage: {{query (read-file "queries/library/dashboard/waiting-for-items.clj")}
-;; Shows active waiting-for items
+;; Usage: {{query (cached-query #(read-file "queries/library/dashboard/waiting-for-items-cached.clj")
+;; Shows active waiting-for items with caching
 
-{:title "⏳ Active Waiting For Items"
+{:title "⏳ Active Waiting For Items (Cached)"
 :query [:find (pull ?b [:block/content :block/properties])
 :where
 [?b :block/properties ?props]
@@ -18,6 +18,6 @@ props (:block/properties b)]
 :follow-up-date (get props :follow-up-date)
 :project (get props :project)})) result))
  :cache-enabled true
- :cache-key "waiting-for-items"
+ :cache-key "waiting-for-items-cached"
  :cache-ttl 300
  :mobile-ttl 600}

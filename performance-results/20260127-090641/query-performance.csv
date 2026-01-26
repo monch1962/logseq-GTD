@@ -1,0 +1,11 @@
+query,platform,execution_time,status
+Next Actions by Context,desktop,0.33,WARNING
+Next Actions by Context,mobile,0.60,WARNING
+Priority Tasks,desktop,0.33,WARNING
+Priority Tasks,mobile,0.60,WARNING
+Project Status,desktop,0.33,WARNING
+Project Status,mobile,0.60,WARNING
+Waiting For Items,desktop,0.33,WARNING
+Waiting For Items,mobile,0.60,WARNING
+Weekly Review Summary,desktop,0.33,WARNING
+Weekly Review Summary,mobile,0.60,WARNING

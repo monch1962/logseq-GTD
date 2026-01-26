@@ -1,0 +1,11 @@
+query,platform,execution_time,status
+Next Actions by Context,desktop,0.77,FAIL
+Next Actions by Context,mobile,1.17,FAIL
+Priority Tasks,desktop,0.77,FAIL
+Priority Tasks,mobile,1.17,FAIL
+Project Status,desktop,0.77,FAIL
+Project Status,mobile,1.17,FAIL
+Waiting For Items,desktop,0.77,FAIL
+Waiting For Items,mobile,1.17,FAIL
+Weekly Review Summary,desktop,0.77,FAIL
+Weekly Review Summary,mobile,1.17,FAIL

@@ -1,8 +1,13 @@
 template:: GTD Next Actions Dashboard
 description:: Comprehensive view of all next actions with GTD filtering by context, time, energy, and priority
-version:: 1.0
+version:: 1.1
 compatibility:: Logseq mobile & desktop
 gtd-compliance:: Guided GTD
+performance-optimized:: true
+cache-enabled:: true
+cache-ttl:: 300
+lazy-loading:: enabled
+mobile-optimized:: true
 
 # GTD Next Actions Dashboard
 
@@ -30,23 +35,23 @@ gtd-compliance:: Guided GTD
 
 ## 📋 Next Actions by Priority
 
-### 🔥 HIGH Priority Next Actions
-{{query (assoc (read-file "queries/library/next-actions/by-priority.clj")
+### 🔥 HIGH Priority Next Actions (Cached)
+{{query (assoc (read-file "queries/library/next-actions/by-priority-cached.clj")
                :title "HIGH Priority ({{filter-context}})"
                :limit "{{show-count}}")
-        :inputs ["HIGH" :context]}}
+        :inputs ["HIGH" "{{filter-context}}"]}}
 
-### 🎯 MEDIUM Priority Next Actions
-{{query (assoc (read-file "queries/library/next-actions/by-priority.clj")
+### 🎯 MEDIUM Priority Next Actions (Cached)
+{{query (assoc (read-file "queries/library/next-actions/by-priority-cached.clj")
                :title "MEDIUM Priority ({{filter-context}})"
                :limit "{{show-count}}")
-        :inputs ["MEDIUM" :context]}}
+        :inputs ["MEDIUM" "{{filter-context}}"]}}
 
-### 📋 LOW Priority Next Actions
-{{query (assoc (read-file "queries/library/next-actions/by-priority.clj")
+### 📋 LOW Priority Next Actions (Cached)
+{{query (assoc (read-file "queries/library/next-actions/by-priority-cached.clj")
                :title "LOW Priority ({{filter-context}})"
                :limit "{{show-count}}")
-        :inputs ["LOW" :context]}}
+        :inputs ["LOW" "{{filter-context}}"]}}
 
 ## ⏰ Time-Based Next Actions
 
@@ -109,7 +114,10 @@ gtd-compliance:: Guided GTD
 
 ## 📍 Context-Specific Views
 
-### All Contexts Overview
+### All Contexts Overview (Lazy Loaded)
+<details>
+<summary>📊 Show Tasks by Context Breakdown ({{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :status) "not-started"]] :view :text}}} total tasks)</summary>
+
 {{query {:title "📊 Tasks by Context"
          :query [:find ?context (count ?b)
                  :where
@@ -120,18 +128,28 @@ gtd-compliance:: Guided GTD
          :group-by ?context
          :sort-by (count ?b)
          :sort-dir :desc
-         :view :table}}}
+         :view :table
+         :cache-enabled true
+         :cache-ttl 600}}}
+</details>
 
-### Quick Context Links
-- **@computer:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@computer"] [(get ?props :status) "not-started"]] :view :text}}} tasks → [[@computer tasks]]
-- **@phone:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@phone"] [(get ?props :status) "not-started"]] :view :text}}} tasks → [[@phone tasks]]
-- **@office:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@office"] [(get ?props :status) "not-started"]] :view :text}}} tasks → [[@office tasks]]
-- **@home:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@home"] [(get ?props :status) "not-started"]] :view :text}}} tasks → [[@home tasks]]
-- **@errands:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@errands"] [(get ?props :status) "not-started"]] :view :text}}} tasks → [[@errands tasks]]
+### Quick Context Links (Cached)
+<details>
+<summary>🔗 Show Quick Context Links</summary>
 
-## ⚠️ GTD Compliance Checks
+- **@computer:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@computer"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}} tasks → [[@computer tasks]]
+- **@phone:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@phone"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}} tasks → [[@phone tasks]]
+- **@office:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@office"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}} tasks → [[@office tasks]]
+- **@home:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@home"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}} tasks → [[@home tasks]]
+- **@errands:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :context) "@errands"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}} tasks → [[@errands tasks]]
+</details>
 
-### Next Action Quality Check
+## ⚠️ GTD Compliance Checks (Lazy Loaded)
+
+<details>
+<summary>🔍 Show GTD Compliance Checks</summary>
+
+### Next Action Quality Check (Cached)
 {{query {:title "⚠️ Vague Next Actions (Needs Clarification)"
          :query [:find (pull ?b [:block/content])
                  :where
@@ -143,6 +161,8 @@ gtd-compliance:: Guided GTD
                  [(clojure.string/includes? (:block/content ?b) "look into")]
                  [(clojure.string/includes? (:block/content ?b) "think about")]]
          :limit 5
+         :cache-enabled true
+         :cache-ttl 600
          :result-transform (fn [results]
                              (map (fn [r]
                                     {:title (str "❌ " (:block/content r))
@@ -150,7 +170,7 @@ gtd-compliance:: Guided GTD
                                      :url (str "#" (:block/uuid r))})
                                   results))}}}
 
-### Missing Contexts
+### Missing Contexts (Cached)
 {{query {:title "⚠️ Tasks Without Context"
          :query [:find (pull ?b [:block/content])
                  :where
@@ -159,9 +179,11 @@ gtd-compliance:: Guided GTD
                  [(get ?props :status) "not-started"]
                  (not [?b :block/properties ?p2]
                       [(get ?p2 :context)])]
-         :limit 5}}}
+         :limit 5
+         :cache-enabled true
+         :cache-ttl 600}}}
 
-### Blocked Tasks
+### Blocked Tasks (Cached)
 {{query {:title "🚧 Blocked Tasks"
          :query [:find (pull ?b [:block/content :block/properties])
                  :where
@@ -169,15 +191,18 @@ gtd-compliance:: Guided GTD
                  [?b :block/properties ?props]
                  [(get ?props :status) "not-started"]
                  [(get ?props :blocked) true]]
-         :limit 5}}}
+         :limit 5
+         :cache-enabled true
+         :cache-ttl 600}}}
+</details>
 
-## 📊 Dashboard Statistics
+## 📊 Dashboard Statistics (Cached)
 
 ### Next Actions Summary
-- **Total Next Actions:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :status) "not-started"]] :view :text}}}
-- **High Priority:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :priority) "HIGH"] [(get ?props :status) "not-started"]] :view :text}}}
-- **Due Today:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :due-date) "{{today}}"] [(get ?props :status) "not-started"]] :view :text}}}
-- **Overdue:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :due-date) ?due] [(< ?due "{{today}}")] [(get ?props :status) "not-started"]] :view :text}}}
+- **Total Next Actions:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}}
+- **High Priority:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :priority) "HIGH"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}}
+- **Due Today:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :due-date) "{{today}}"] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}}
+- **Overdue:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :due-date) ?due] [(< ?due "{{today}}")] [(get ?props :status) "not-started"]] :view :text :cache-enabled true :cache-ttl 300}}}
 
 ### Context Distribution
 {{query {:title "📈 Context Distribution"

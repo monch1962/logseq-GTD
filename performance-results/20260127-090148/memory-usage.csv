@@ -1,0 +1,11 @@
+template,platform,memory_usage,status
+GTD Quick Capture,desktop,51,WARNING
+GTD Quick Capture,mobile,58,WARNING
+GTD Daily Journal,desktop,64,WARNING
+GTD Daily Journal,mobile,50,PASS
+Next Actions Dashboard,desktop,42,PASS
+Next Actions Dashboard,mobile,58,WARNING
+GTD Management Dashboard,desktop,52,WARNING
+GTD Management Dashboard,mobile,68,FAIL
+Weekly Review,desktop,46,PASS
+Weekly Review,mobile,53,WARNING
