@@ -37,8 +37,7 @@ logseq-GTD/
 │   │   ├── [08-weekly-review.md](GTD_Templates/Starter_Kit/08-weekly-review.md)
 │   │   ├── [09-2-minute-rule.md](GTD_Templates/Starter_Kit/09-2-minute-rule.md)
 │   │   └── [README.md](GTD_Templates/Starter_Kit/README.md)
-│   ├── Phase1/                 # Backward compatibility (symlinks to new locations)
-│   ├── Phase2/                 # Backward compatibility (symlinks to new locations)
+
 │   └── [index.md](GTD_Templates/index.md)           # Complete template index and navigation
 ├── research/                   # Research and documentation
 ├── queries/                    # Logseq query examples

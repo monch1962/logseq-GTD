@@ -4,9 +4,9 @@
 
 A comprehensive Getting Things Done (GTD) implementation using pure Logseq templates with integrated FAQ coverage. This system addresses common GTD challenges through an integrated dashboard approach.
 
-## 📁 Template Structure (Reorganized by GTD Phase)
+## 📁 Template Structure (Organized by GTD Phase)
 
-**Note:** Templates are now organized by GTD workflow phase. The old `Phase1/` and `Phase2/` directories contain symlinks for backward compatibility.
+Templates are organized by GTD workflow phase for logical navigation and usage.
 
 ### Capture Phase
 **Location:** `Capture/`
@@ -155,8 +155,8 @@ Instead of separate templates for each FAQ, we use **integrated dashboards** tha
 4. **Review with:** [`Review/08-weekly-review.md`](Review/08-weekly-review.md)
 
 ### Progressive Enhancement
-**Week 1-2:** Phase 1 templates only
-**Week 3-4:** Add Phase 2 dashboards as needed
+**Week 1-2:** Core templates (Capture, Process, Organize, Review)
+**Week 3-4:** Add advanced templates (Engage, Improve, System) as needed
 **Month 2:** Customize and optimize based on usage
 **Ongoing:** Use Analytics dashboard for continuous improvement
 

@@ -1,1 +1,0 @@
-../Process/09-2-minute-rule.md

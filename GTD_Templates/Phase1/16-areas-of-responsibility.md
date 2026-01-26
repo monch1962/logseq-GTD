@@ -1,1 +1,0 @@
-../Organize/16-areas-of-responsibility.md

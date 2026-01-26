@@ -37,8 +37,6 @@ GTD_Templates/
 │   ├── 08-weekly-review.md
 │   ├── 09-2-minute-rule.md
 │   └── README.md
-├── Phase1/            # Backward compatibility (symlinks)
-├── Phase2/            # Backward compatibility (symlinks)
 └── index.md           # This file
 ```
 
@@ -210,13 +208,13 @@ GTD_Templates/
 5. **Review weekly:** Never skip [Review/08-weekly-review.md](Review/08-weekly-review.md)
 6. **Learn continuously:** Visit [Improve/14-gtd-learning-center.md](Improve/14-gtd-learning-center.md) for tutorials
 
-## 🔄 Backward Compatibility
+## 🔄 Navigation Tips
 
-**Important:** All templates are still accessible via the old paths:
-- `Phase1/` directory contains symlinks to new locations
-- `Phase2/` directory contains symlinks to new locations
-- **No breaking changes** for existing users
-- **New users** should use the new phase-based directories
+**Quick Access:**
+- **Daily workflow:** Start with `Review/05-gtd-daily-journal.md`
+- **Quick capture:** Use `Capture/01-quick-capture.md` for mobile
+- **Weekly planning:** Use `Review/08-weekly-review.md` on Fridays
+- **Beginner friendly:** Start with `Starter_Kit/` templates
 
 ---
 

@@ -15,8 +15,6 @@ logseq-GTD/
 │   ├── Improve/                # Enhance and optimize your system
 │   ├── System/                 # System validation and testing
 │   ├── Starter_Kit/            # 5-template beginner package
-│   ├── Phase1/                 # Backward compatibility (symlinks)
-│   ├── Phase2/                 # Backward compatibility (symlinks)
 │   └── index.md               # Complete template index
 ├── research/                   # Research and planning documents
 ├── queries/                    # Logseq query examples
@@ -45,10 +43,10 @@ Since this is a template system, testing is manual:
 To test a specific template:
 ```bash
 # Check template syntax
-grep -n "template::" GTD_Templates/Phase1/01-quick-capture.md
+grep -n "template::" GTD_Templates/Capture/01-quick-capture.md
 
 # Verify template structure
-head -20 GTD_Templates/Phase1/01-quick-capture.md
+head -20 GTD_Templates/Capture/01-quick-capture.md
 
 # Test cross-references
 grep -r "\[\[.*\]\]" GTD_Templates/ --include="*.md"

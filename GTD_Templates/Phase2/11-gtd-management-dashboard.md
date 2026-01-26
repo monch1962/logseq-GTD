@@ -1,1 +1,0 @@
-../Organize/11-gtd-management-dashboard.md

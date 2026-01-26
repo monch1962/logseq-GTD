@@ -1,1 +1,0 @@
-../Review/05-gtd-daily-journal.md
