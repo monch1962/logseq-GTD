@@ -51,13 +51,7 @@ Share → Logseq → Auto-append to inbox
 - Type `/quick-capture` in any page
 
 ## 📊 Capture Statistics
-{{query {:title "📈 Today's Captures"
-         :query [:find (count ?b)
-                 :where
-                 [?b :block/properties ?props]
-                 [(get ?props :captured) ?captured]
-                 [(clojure.string/includes? ?captured "{{today}}")]]
-         :view :text}}}
+{{query (read-file "queries/library/capture/todays-captures.clj")}}
 
 ## 🎯 Best Practices
 1. **Capture first, process later** - Don't organize during capture

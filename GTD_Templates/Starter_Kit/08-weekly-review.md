@@ -40,7 +40,7 @@ gtd-compliance:: Full GTD weekly review process
 - [ ] Check voice memos and notes
 - [ ] Review meeting notes and action items
 
-**Current inbox status:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :status) "unprocessed"]] :view :text}}} items
+**Current inbox status:** {{query (read-file "queries/library/capture/inbox-status.clj")}} items
 
 ### Phase 2: Process & Empty
 - [ ] Process all inbox items to zero
@@ -75,24 +75,24 @@ gtd-compliance:: Full GTD weekly review process
 ## 📊 System Status Review
 
 ### Inbox Analysis
-**Total captured this week:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :captured) ?captured] [(clojure.string/includes? ?captured "{{this-week}}")]] :view :text}}} items
+**Total captured this week:** {{query (read-file "queries/library/review/weekly-captures.clj")}} items
 **Average processing time:** {{average-processing-time}} minutes
 **Inbox zero days:** {{inbox-zero-days}}/7
 
 ### Next Actions Review
-**Total next actions:** {{query {:query [:find (count ?b) :where [?b :block/marker "TODO"] [?b :block/properties ?props] [(get ?props :status) "not-started"]] :view :text}}}
+**Total next actions:** {{query (read-file "queries/library/review/total-next-actions.clj")}}
 **By priority:** HIGH: {{high-count}}, MEDIUM: {{medium-count}}, LOW: {{low-count}}
 **Completion rate:** {{completion-rate}}%
 **Average time to complete:** {{average-completion-time}} hours
 
 ### Projects Review
-**Active projects:** {{query {:query [:find (count ?p) :where [?p :block/properties ?props] [(get ?props :type) "project"] [(get ?props :status) "active"]] :view :text}}}
+**Active projects:** {{query (read-file "queries/library/projects/active-count.clj")}}
 **Projects with next actions:** {{projects-with-actions}}/{{total-projects}}
 **Project completion rate:** {{project-completion-rate}}%
 **Stuck projects:** {{stuck-projects-count}}
 
 ### Waiting For Review
-**Items waiting:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :type) "waiting-for"] [(get ?props :status) "waiting"]] :view :text}}}
+**Items waiting:** {{query (read-file "queries/library/dashboard/waiting-items-count.clj")}}
 **Overdue follow-ups:** {{overdue-followups}}
 **Average wait time:** {{average-wait-time}} days
 
