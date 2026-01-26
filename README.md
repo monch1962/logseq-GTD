@@ -8,32 +8,32 @@ A comprehensive, plugin-free Getting Things Done (GTD) implementation for Logseq
 logseq-GTD/
 ├── GTD_Templates/              # Complete GTD template system
 │   ├── Phase1/                 # Core GTD foundation (10 templates)
-│   │   ├── 01-quick-capture.md
-│   │   ├── 02-task-processing.md
-│   │   ├── 03-basic-priority-system.md
-│   │   ├── 04-context-manager.md
-│   │   ├── 05-gtd-daily-journal.md
-│   │   ├── 06-next-actions-dashboard.md
-│   │   ├── 07-project-next-action-enforcement.md
-│   │   ├── 08-weekly-review.md
-│   │   ├── 09-2-minute-rule.md
-│   │   └── 10-cross-platform-test.md
+│   │   ├── [01-quick-capture.md](GTD_Templates/Phase1/01-quick-capture.md)
+│   │   ├── [02-task-processing.md](GTD_Templates/Phase1/02-task-processing.md)
+│   │   ├── [03-basic-priority-system.md](GTD_Templates/Phase1/03-basic-priority-system.md)
+│   │   ├── [04-context-manager.md](GTD_Templates/Phase1/04-context-manager.md)
+│   │   ├── [05-gtd-daily-journal.md](GTD_Templates/Phase1/05-gtd-daily-journal.md)
+│   │   ├── [06-next-actions-dashboard.md](GTD_Templates/Phase1/06-next-actions-dashboard.md)
+│   │   ├── [07-project-next-action-enforcement.md](GTD_Templates/Phase1/07-project-next-action-enforcement.md)
+│   │   ├── [08-weekly-review.md](GTD_Templates/Phase1/08-weekly-review.md)
+│   │   ├── [09-2-minute-rule.md](GTD_Templates/Phase1/09-2-minute-rule.md)
+│   │   └── [10-cross-platform-test.md](GTD_Templates/Phase1/10-cross-platform-test.md)
 │   ├── Phase2/                 # Integrated FAQ solution (5 templates)
-│   │   ├── 11-gtd-management-dashboard.md
-│   │   ├── 12-gtd-integration-hub.md
-│   │   ├── 13-gtd-analytics-improvement.md
-│   │   ├── 14-gtd-learning-center.md
-│   │   └── 15-integrated-faq-test.md
-│   └── README.md               # Template overview and usage
+│   │   ├── [11-gtd-management-dashboard.md](GTD_Templates/Phase2/11-gtd-management-dashboard.md)
+│   │   ├── [12-gtd-integration-hub.md](GTD_Templates/Phase2/12-gtd-integration-hub.md)
+│   │   ├── [13-gtd-analytics-improvement.md](GTD_Templates/Phase2/13-gtd-analytics-improvement.md)
+│   │   ├── [14-gtd-learning-center.md](GTD_Templates/Phase2/14-gtd-learning-center.md)
+│   │   └── [15-integrated-faq-test.md](GTD_Templates/Phase2/15-integrated-faq-test.md)
+│   └── [README.md](GTD_Templates/README.md)               # Template overview and usage
 ├── research/                   # Research and documentation
 ├── queries/                    # Logseq query examples
 ├── templates/                  # Legacy templates
 ├── mobile/                     # Mobile workflow research
 ├── examples/                   # Implementation examples
-├── INSTALLATION.md             # Detailed installation guide
-├── USAGE.md                    # Comprehensive usage instructions
-├── TESTING_CHECKLIST.md        # Complete testing framework
-├── LICENSE                     # MIT License
+├── [INSTALLATION.md](INSTALLATION.md)             # Detailed installation guide
+├── [USAGE.md](USAGE.md)                    # Comprehensive usage instructions
+├── [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md)        # Complete testing framework
+├── [LICENSE](LICENSE)                     # MIT License
 └── README.md                   # This file
 ```
 
@@ -68,30 +68,30 @@ logseq-GTD/
 ## Template System Overview
 
 ### **Phase 1: Core GTD Foundation (10 Templates)**
-1. **Quick Capture** - Ultra-fast mobile capture workflow
-2. **Task Processing** - GTD clarification and organization
-3. **Priority System** - HIGH/MEDIUM/LOW priority management
-4. **Context Manager** - MRU dropdowns with 10-item history
-5. **Daily Journal** - Priority task integration with customizable views
-6. **Next Actions Dashboard** - GTD criteria filtering and selection
-7. **Project Management** - Next action enforcement and tracking
-8. **Weekly Review** - Comprehensive review with reminder system
-9. **2-Minute Rule** - Quick task processing framework
-10. **Cross-Platform Test** - Mobile/desktop compatibility verification
+1. **[Quick Capture](GTD_Templates/Phase1/01-quick-capture.md)** - Ultra-fast mobile capture workflow
+2. **[Task Processing](GTD_Templates/Phase1/02-task-processing.md)** - GTD clarification and organization
+3. **[Priority System](GTD_Templates/Phase1/03-basic-priority-system.md)** - HIGH/MEDIUM/LOW priority management
+4. **[Context Manager](GTD_Templates/Phase1/04-context-manager.md)** - MRU dropdowns with 10-item history
+5. **[Daily Journal](GTD_Templates/Phase1/05-gtd-daily-journal.md)** - Priority task integration with customizable views
+6. **[Next Actions Dashboard](GTD_Templates/Phase1/06-next-actions-dashboard.md)** - GTD criteria filtering and selection
+7. **[Project Management](GTD_Templates/Phase1/07-project-next-action-enforcement.md)** - Next action enforcement and tracking
+8. **[Weekly Review](GTD_Templates/Phase1/08-weekly-review.md)** - Comprehensive review with reminder system
+9. **[2-Minute Rule](GTD_Templates/Phase1/09-2-minute-rule.md)** - Quick task processing framework
+10. **[Cross-Platform Test](GTD_Templates/Phase1/10-cross-platform-test.md)** - Mobile/desktop compatibility verification
 
 ### **Phase 2: Integrated FAQ Solution (5 Templates)**
-11. **GTD Management Dashboard** - Waiting-for + Someday/Maybe + Reference
-12. **GTD Integration Hub** - Email + Calendar + External Tools
-13. **GTD Analytics Improvement** - Metrics + Continuous Improvement
-14. **GTD Learning Center** - Education + Tutorials + Community
-15. **Integrated FAQ Test** - Comprehensive testing framework
+11. **[GTD Management Dashboard](GTD_Templates/Phase2/11-gtd-management-dashboard.md)** - Waiting-for + Someday/Maybe + Reference
+12. **[GTD Integration Hub](GTD_Templates/Phase2/12-gtd-integration-hub.md)** - Email + Calendar + External Tools
+13. **[GTD Analytics Improvement](GTD_Templates/Phase2/13-gtd-analytics-improvement.md)** - Metrics + Continuous Improvement
+14. **[GTD Learning Center](GTD_Templates/Phase2/14-gtd-learning-center.md)** - Education + Tutorials + Community
+15. **[Integrated FAQ Test](GTD_Templates/Phase2/15-integrated-faq-test.md)** - Comprehensive testing framework
 
 ## Quick Start
 
 ### Installation
 1. **Copy templates**: Copy the `GTD_Templates/` folder to your Logseq graph
-2. **Configure templates**: Follow instructions in `INSTALLATION.md`
-3. **Test workflow**: Use `TESTING_CHECKLIST.md` to verify installation
+2. **Configure templates**: Follow instructions in [INSTALLATION.md](INSTALLATION.md)
+3. **Test workflow**: Use [TESTING_CHECKLIST.md](TESTING_CHECKLIST.md) to verify installation
 4. **Customize settings**: Adjust priorities, contexts, and action counts as needed
 
 ### Basic Workflow
@@ -129,22 +129,22 @@ logseq-GTD/
 
 ## Documentation
 
-- **`INSTALLATION.md`** - Detailed setup instructions
-- **`USAGE.md`** - Comprehensive usage guide
-- **`TESTING_CHECKLIST.md`** - Complete testing framework
-- **`GTD_Templates/README.md`** - Template-specific documentation
+- **[INSTALLATION.md](INSTALLATION.md)** - Detailed setup instructions
+- **[USAGE.md](USAGE.md)** - Comprehensive usage guide
+- **[TESTING_CHECKLIST.md](TESTING_CHECKLIST.md)** - Complete testing framework
+- **[GTD_Templates/README.md](GTD_Templates/README.md)** - Template-specific documentation
 
 ## Support & Community
 
 For questions, customization, or contributions:
 1. Review the comprehensive examples in `examples/`
 2. Check the integrated FAQ in Phase 2 templates
-3. Refer to the testing checklist for troubleshooting
+3. Refer to the [testing checklist](TESTING_CHECKLIST.md) for troubleshooting
 4. Customize templates to fit your specific workflow
 
 ## License
 
-MIT License - See `LICENSE` file for details.
+MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
 
