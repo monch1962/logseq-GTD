@@ -121,68 +121,13 @@ next-week-focus:: Block 2 hours for skill development
 ## 📊 Area Dashboard Queries
 
 ### Current Area Status
-```clojure
-#+BEGIN_QUERY
-{:title "Areas of Responsibility - Current Status"
- :query [:find (pull ?b [*])
-         :where
-         [?b :block/name ?name]
-         [(clojure.string/includes? ?name "Area/")]
-         [?b :block/properties ?props]
-         [(get ?props "type") ?type]
-         [(= ?type "area-of-responsibility")]]
- :view :table
- :result-transform (fn [result]
-                     (map (fn [b]
-                            (let [props (:block/properties b)]
-                              {:area (last (clojure.string/split (:block/name b) #"/"))
-                               :category (get props "category")
-                               :status (get props "current-status")
-                               :last-reviewed (get props "last-reviewed")
-                               :next-review (get props "next-review")})) result))}
-#+END_QUERY
-```
+{{query (read-file "queries/library/areas/status.clj")}}
 
 ### Areas Needing Attention
-```clojure
-#+BEGIN_QUERY
-{:title "Areas Needing Attention"
- :query [:find (pull ?b [*])
-         :where
-         [?b :block/name ?name]
-         [(clojure.string/includes? ?name "Area/")]
-         [?b :block/properties ?props]
-         [(get ?props "type") ?type]
-         [(= ?type "area-of-responsibility")]
-         [(get ?props "current-status") ?status]
-         [(contains? #{"needs-attention" "neglected"} ?status)]]
- :view :table}
-#+END_QUERY
-```
+{{query (read-file "queries/library/areas/needing-attention.clj")}}
 
 ### Upcoming Area Reviews
-```clojure
-#+BEGIN_QUERY
-{:title "Upcoming Area Reviews"
- :query [:find (pull ?b [*])
-         :where
-         [?b :block/name ?name]
-         [(clojure.string/includes? ?name "Area/")]
-         [?b :block/properties ?props]
-         [(get ?props "type") ?type]
-         [(= ?type "area-of-responsibility")]
-         [(get ?props "next-review") ?next-review]
-         [(<= ?next-review "{{next-week}}")]]
- :view :table
- :result-transform (fn [result]
-                     (sort-by :next-review
-                       (map (fn [b]
-                              (let [props (:block/properties b)]
-                                {:area (last (clojure.string/split (:block/name b) #"/"))
-                                 :next-review (get props "next-review")
-                                 :review-frequency (get props "review-frequency")})) result)))}
-#+END_QUERY
-```
+{{query (read-file "queries/library/areas/upcoming-reviews.clj")}}
 
 ## 🎯 Area-Project Connection
 
@@ -282,19 +227,7 @@ follow-up:: {{date}}
 ```
 
 ### With Next Actions Dashboard
-```clojure
-#+BEGIN_QUERY
-{:title "Next Actions by Area"
- :query [:find (pull ?b [*])
-         :where
-         [?b :block/marker ?marker]
-         [(= ?marker "TODO")]
-         [?b :block/properties ?props]
-         [(get ?props "area") ?area]]
- :view :table
- :group-by :area}
-#+END_QUERY
-```
+{{query (read-file "queries/library/areas/next-actions-by-area.clj")}}
 
 ## 🏆 Best Practices
 

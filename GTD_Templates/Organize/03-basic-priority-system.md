@@ -118,17 +118,8 @@ urgency:: {{today|this-week|next-week|later}}
 **Result:** {{calculated-priority}}
 
 ### Due Date Helper
-{{query {:title "📅 Upcoming Due Dates"
-         :query [:find ?due (count ?b)
-                 :where
-                 [?b :block/marker "TODO"]
-                 [?b :block/properties ?props]
-                 [(get ?props :due-date) ?due]
-                 [(>= ?due "{{today}}")]
-                 [(<= ?due "{{today-plus-14}}")]]
-         :group-by ?due
-         :sort-by ?due
-         :view :table}}}
+{{query (read-file "queries/library/reviews/upcoming-due-dates.clj")
+        :inputs ["{{today}}" "{{today-plus-14}}"]}}
 
 ## 🔄 Priority Review System
 

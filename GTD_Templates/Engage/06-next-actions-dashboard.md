@@ -31,73 +31,22 @@ gtd-compliance:: Guided GTD
 ## 📋 Next Actions by Priority
 
 ### 🔥 HIGH Priority Next Actions
-{{query {:title "HIGH Priority ({{filter-context}})"
-         :query [:find (pull ?b [:block/content :block/properties :block/page])
-                 :in $ ?context
-                 :where
-                 [?b :block/marker "TODO"]
-                 [?b :block/properties ?props]
-                 [(get ?props :priority) "HIGH"]
-                 [(get ?props :status) "not-started"]
-                 [(get ?props :context) ?ctx]
-                 [(= ?ctx ?context)]
-                 (not [?b :block/properties ?p2]
-                      [(get ?p2 :blocked) true])]
-         :inputs [:context]
-         :limit "{{show-count}}"
-         :result-transform (fn [results]
-                             (map (fn [r]
-                                    {:title (str "• " (:block/content r))
-                                     :description (str "Context: " (get-in r [:block/properties :context] "?")
-                                                    " | Time: " (get-in r [:block/properties :time-estimate] "?") "min"
-                                                    " | Project: " (get-in r [:block/properties :project] "None"))
-                                     :url (str "#" (:block/uuid r))})
-                                  results))}}}
+{{query (assoc (read-file "queries/library/next-actions/by-priority.clj")
+               :title "HIGH Priority ({{filter-context}})"
+               :limit "{{show-count}}")
+        :inputs ["HIGH" :context]}}
 
 ### 🎯 MEDIUM Priority Next Actions
-{{query {:title "MEDIUM Priority ({{filter-context}})"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :in $ ?context
-                 :where
-                 [?b :block/marker "TODO"]
-                 [?b :block/properties ?props]
-                 [(get ?props :priority) "MEDIUM"]
-                 [(get ?props :status) "not-started"]
-                 [(get ?props :context) ?ctx]
-                 [(= ?ctx ?context)]
-                 (not [?b :block/properties ?p2]
-                      [(get ?p2 :blocked) true])]
-         :inputs [:context]
-         :limit "{{show-count}}"
-         :result-transform (fn [results]
-                             (map (fn [r]
-                                    {:title (str "• " (:block/content r))
-                                     :description (str "Due: " (get-in r [:block/properties :due-date] "None")
-                                                    " | Energy: " (get-in r [:block/properties :energy] "medium"))
-                                     :url (str "#" (:block/uuid r))})
-                                  results))}}}
+{{query (assoc (read-file "queries/library/next-actions/by-priority.clj")
+               :title "MEDIUM Priority ({{filter-context}})"
+               :limit "{{show-count}}")
+        :inputs ["MEDIUM" :context]}}
 
 ### 📋 LOW Priority Next Actions
-{{query {:title "LOW Priority ({{filter-context}})"
-         :query [:find (pull ?b [:block/content :block/properties])
-                 :in $ ?context
-                 :where
-                 [?b :block/marker "TODO"]
-                 [?b :block/properties ?props]
-                 [(get ?props :priority) "LOW"]
-                 [(get ?props :status) "not-started"]
-                 [(get ?props :context) ?ctx]
-                 [(= ?ctx ?context)]
-                 (not [?b :block/properties ?p2]
-                      [(get ?p2 :blocked) true])]
-         :inputs [:context]
-         :limit "{{show-count}}"
-         :result-transform (fn [results]
-                             (map (fn [r]
-                                    {:title (str "• " (:block/content r))
-                                     :description (str "Context: " (get-in r [:block/properties :context] "?"))
-                                     :url (str "#" (:block/uuid r))})
-                                  results))}}}
+{{query (assoc (read-file "queries/library/next-actions/by-priority.clj")
+               :title "LOW Priority ({{filter-context}})"
+               :limit "{{show-count}}")
+        :inputs ["LOW" :context]}}
 
 ## ⏰ Time-Based Next Actions
 
