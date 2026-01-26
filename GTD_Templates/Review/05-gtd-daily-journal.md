@@ -13,7 +13,7 @@ gtd-compliance:: Guided GTD
 - [ ] Process email inbox
 - [ ] Process digital captures
 - [ ] Empty mental RAM
-**Current inbox count:** {{query {:query [:find (count ?b) :where [?b :block/properties ?props] [(get ?props :status) "unprocessed"]] :view :text}}}
+**Current inbox count:** {{query (read-file "queries/library/capture/inbox-status.clj")}}
 
 ### 2. Review Next Actions
 **Current Context:** {{current-context|@computer|@phone|@office|@home|@errands}}
