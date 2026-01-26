@@ -182,7 +182,7 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 ---
 **Version**: 1.1.0 (Reorganized by GTD Phase)  
-**Last Updated**: January 2025  
+**Last Updated**: January 2026  
 **Compatibility**: Logseq Desktop & Mobile  
 **Methodology**: Getting Things Done (GTD)  
 **Approach**: Guided implementation with customizable defaults  

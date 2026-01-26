@@ -287,12 +287,12 @@ Use the dashboard to identify neglected areas and redistribute focus as needed.
 ```markdown
 ## Area Improvement Timeline
 
-### Q1 2025
+### Q1 2026
 - Health: Needs Attention → Maintaining
 - Professional: Neglected → Needs Attention
 - Financial: Maintaining → Thriving
 
-### Q2 2025 Goals
+### Q2 2026 Goals
 - Health: Maintaining → Thriving
 - Professional: Needs Attention → Maintaining
 - Relationships: Maintaining → Thriving

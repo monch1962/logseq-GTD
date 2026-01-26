@@ -229,6 +229,6 @@ compatibility:: Logseq mobile & desktop
 4. **Testing framework**: Built-in validation tools
 
 ---
-*Last updated: January 2025*
+*Last updated: January 2026*
 *Version: 1.0*
 *For agentic coding assistants working on the Logseq GTD Template System*

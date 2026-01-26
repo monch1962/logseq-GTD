@@ -39,15 +39,15 @@ done
 ```markdown
 # Test Data for Query Validation
 - Test task 1
-  captured:: 2025-01-27
+  captured:: 2026-01-27
   status:: unprocessed
   context:: @computer
   time-estimate:: 5
   priority:: HIGH
   
 - Test task 2  
-  captured:: 2025-01-26
-  processed:: 2025-01-27
+  captured:: 2026-01-26
+  processed:: 2026-01-27
   status:: next-action
   context:: @phone
   time-estimate:: 2
@@ -299,6 +299,6 @@ Run the test suite:
 
 ---
 
-*Last updated: January 27, 2025*
+*Last updated: January 27, 2026*
 *Test framework version: 1.0*
 *For validating Logseq GTD Template System after query library migration*
