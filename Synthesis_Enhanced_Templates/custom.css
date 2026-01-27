@@ -1,0 +1,97 @@
+/* Synthesis Lab CSS for GTD Enhanced Templates */
+/* Based on Synthesis tutorial requirements */
+
+div.out.log {
+  line-height: 16px;
+  font-family: monospace;
+  .tree-node {
+    display: inline-table;
+  }
+}
+
+div.macro[data-macro-name='cell'] ,
+div.macro[data-macro-name='cell'] div.raw_html ,
+div.macro[data-macro-name='eval'] ,
+div.macro[data-macro-name='eval'] div.raw_html
+{
+  display: inline;
+}
+
+span.eval{
+  font-weight: bold;
+}
+span.cell b {
+  cursor: pointer;
+  height: 22px;
+  padding: 0 2px 0 2px;
+}
+span.cell input {
+  display: none;
+  height: 18px;
+}
+span.cell input:focus {
+  display: inline;
+  padding-left: 4px;
+  width: 32ch;
+}
+span.cell:hover input {
+  display: inline;
+  padding-left: 2px;
+  width: 8ch;
+}
+span.cell:hover input:focus {
+  padding-left: 4px;
+  width: 32ch;
+}
+span.cell, span.cell input {
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+button.dots {
+  background: var(--ls-tertiary-background-color);
+  line-height: 8px;
+  padding: 0px 2px 4px 2px;
+}
+button.eval {
+  background: var(--ls-tertiary-background-color);
+  padding: 2px 4px 2px 4px;
+}
+
+/* GTD-specific styling */
+.gtd-cell {
+  background-color: var(--ls-tertiary-background-color);
+  border-radius: 4px;
+  padding: 2px 4px;
+  margin: 0 2px;
+}
+
+.gtd-highlight {
+  background-color: rgba(255, 200, 0, 0.1);
+  border-left: 3px solid #ffc800;
+  padding-left: 8px;
+}
+
+.gtd-warning {
+  background-color: rgba(255, 100, 100, 0.1);
+  border-left: 3px solid #ff6464;
+  padding-left: 8px;
+}
+
+.gtd-success {
+  background-color: rgba(100, 255, 100, 0.1);
+  border-left: 3px solid #64ff64;
+  padding-left: 8px;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  span.cell input:focus {
+    width: 24ch;
+  }
+  
+  .gtd-cell {
+    padding: 4px 6px;
+    margin: 2px 0;
+  }
+}
