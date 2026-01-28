@@ -57,7 +57,22 @@ This directory contains enhanced versions of the GTD templates that leverage **S
 
 ## Enhanced Templates
 
-### 1. Enhanced Quick Capture (`Capture/01-enhanced-quick-capture.md`)
+### 📦 Consolidated Template Option
+**File:** `enhanced_gtd_templates.md` (1,817 lines)
+**Description:** All 5 enhanced templates in a single file for easy management
+**Best for:** Desktop users who want everything in one place
+**Features:**
+- Complete GTD workflow in one file
+- Easy navigation between template sections
+- Consistent formatting across all templates
+- Reduced file clutter
+- Perfect for reference and learning
+
+**Usage:** See `CONSOLIDATED_GUIDE.md` for detailed instructions.
+
+### 📁 Individual Template Files
+
+#### 1. Enhanced Quick Capture (`Capture/01-enhanced-quick-capture.md`)
 - **Natural language capture**: "Capture 'Call dentist tomorrow'"
 - **Voice-to-text processing**: Mobile voice capture with smart parsing
 - **Auto-property assignment**: Context, priority, time estimates

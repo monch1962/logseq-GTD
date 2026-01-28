@@ -7,11 +7,21 @@ A comprehensive enhancement of the original GTD template system using Logseq's S
 ## What's Included
 
 ### 1. Enhanced Templates (5 Core Templates)
+**Available in two formats:**
+
+#### Option A: Consolidated Template File
+- **`enhanced_gtd_templates.md`** - All 5 templates in one file (1,817 lines)
+- **Benefits:** Easy management, consistent formatting, complete overview
+- **Best for:** Desktop users, reference, learning all features together
+
+#### Option B: Individual Template Files
 - **Enhanced Quick Capture** - Natural language capture with auto-property assignment
 - **Enhanced Task Processing** - AI-powered categorization and batch processing
 - **Enhanced Management Dashboard** - Natural language queries and smart analytics
 - **Enhanced Weekly Review** - Automated preparation and predictive analytics
 - **Enhanced Next Actions Dashboard** - Context-aware task selection and energy matching
+- **Benefits:** Better performance, smaller files, mobile optimization
+- **Best for:** Mobile users, performance-critical setups
 
 ### 2. Technical Implementation
 - **11 JavaScript Functions** for Synthesis Lab
@@ -21,11 +31,27 @@ A comprehensive enhancement of the original GTD template system using Logseq's S
 
 ### 3. Comprehensive Documentation
 - `README.md` - Feature overview and benefits
+- `CONSOLIDATED_GUIDE.md` - Guide for using the consolidated template file
 - `TESTING.md` - Validation procedures and benchmarks
 - `INSTALLATION.md` - Step-by-step setup guide
 - `MIGRATION_GUIDE.md` - Risk-managed migration strategies
 - `INTEGRATION_EXAMPLES.md` - Coexistence patterns with original templates
 - `synthesis_functions.md` - Complete function implementations
+
+### 4. Files Structure
+```
+Synthesis_Enhanced_Templates/
+├── enhanced_gtd_templates.md          # Consolidated template (1,817 lines)
+├── custom.css                         # CSS for Synthesis Lab styling
+├── synthesis_functions.md             # 11 JavaScript function implementations
+├── README.md                          # Feature overview and benefits
+├── CONSOLIDATED_GUIDE.md              # Guide for using consolidated template
+├── TESTING.md                         # Validation procedures
+├── INSTALLATION.md                    # Setup instructions
+├── MIGRATION_GUIDE.md                 # Migration strategies
+├── INTEGRATION_EXAMPLES.md            # Integration patterns
+└── SUMMARY.md                         # Complete implementation summary
+```
 
 ## Key Features Implemented
 
